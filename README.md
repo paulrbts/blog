@@ -1,0 +1,2 @@
+# blog
+A basic blog.

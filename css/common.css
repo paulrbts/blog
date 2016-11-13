@@ -9,20 +9,34 @@ body {
   background-color: #343434
 }
 
+
+
 a:link {
   color: white;
   text-decoration: none
 }
-
 a:visited {
   color: white;
   text-decoration: none;
 }
+a:hover {
+  color: #DC143C;
+  text-decoration: none;
+}
 
+h1 {
+  font-family: hack,monospace;
+  font-size: 4rem;
+}
 
+h2 {
+  font-family: Open Sans,sans-serif;
+  font-size: 2.5rem;
+  color: #34B99D
+}
 
 .current {
-  color: #DC143C;
+  color: #34B99D;
   text-decoration: none;
 }
 
@@ -38,10 +52,10 @@ a:visited {
 }
 
 .nav-top {
-  font-size: 2rem
+  color: #DCDCDC;
+  font-size: 1.5rem;
 }
 
 .nav-btm {
-
-  font-size: 1rem
+  font-size: 1rem;
 }

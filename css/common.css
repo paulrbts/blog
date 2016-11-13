@@ -1,9 +1,25 @@
 html {
   margin: 0;
   padding: 0;
-  
-  font: normal 100%/1.4 Open Sans,sans-serif;
 }
+
+body {
+  font: normal 100%/1.4 Open Sans,sans-serif;
+  color: #DCDCDC;
+  background-color: #343434
+}
+
+a:link {
+  color: white;
+  text-decoration: none
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+
 
 .current {
   color: #DC143C;

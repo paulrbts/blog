@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: default
 title: First blog post
 meta: The first blog post of my site
 category: site-news

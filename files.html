@@ -7,8 +7,8 @@ layout: default
 <ul>
   {% for post in site.categories.site-news limit:3 %}
     <li>
-      <a href="">{{post.title}}</a>
-      <p>{{post.meta}}</p>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.meta }}</p>
     </li>
   {% endfor %}
 </ul>

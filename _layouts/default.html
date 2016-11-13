@@ -3,17 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>paulrbts blog</title>
+    <link href="{{site.baseurl}}/css/common.css" rel="stylesheet">
   </head>
   <body>
 
     <header>
       <h1>Blog title</h1>
-      <nav>
-        <ul>
-          <li><a href="{{site.baseurl}}/index.html">Home</a></li>
-          <li><a href="{{site.baseurl}}/news.html">News</a></li>
+      {% include nav.html %}
     </header>
   {{content}}
+
+  <footer>
+    {% include nav.html %}
+    <p>footer title</p>
+  </footer>
 
   </body>
 </html>

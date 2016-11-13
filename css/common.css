@@ -40,6 +40,11 @@ h3 {
   font-weight: bold;
 }
 
+.container {
+  width:40em;
+  margin: auto;
+}
+
 .current {
   color: #34B99D;
   text-decoration: none;
@@ -53,7 +58,7 @@ h3 {
 }
 
 .nav > li {
-  display: inline-block;
+  display: block;
 }
 
 .nav-top {

@@ -6,7 +6,7 @@ category: site-news
 ---
 <h3 class="post.title">
   {% if post.title %}
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
   {% endif %}
 </h3>
 

@@ -5,8 +5,8 @@ meta: The first blog post of my site
 category: site-news
 ---
 <h3 class="post.title">
-  {% if page.title %}
-      <a href="{{ root_url }}{{ page.url }}">{{ page.title }}</a>
+  {% if post.title %}
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a>
   {% endif %}
 </h3>
 

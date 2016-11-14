@@ -4,40 +4,43 @@ html {
 }
 
 body {
-  font-family: 'Open+Sans+Condensed:bold', sans-serif;
+  font: normal 100%/1.4 PT Sans,sans-serif;
+  font-size: 20px;
   color: #DCDCDC;
   background-color: #343434
 }
 
-a:link {
-  color: white;
-  text-decoration: none
-}
-a:visited {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  color: #DC143C;
-  text-decoration: none;
-}
-
 h1 {
-  font-family: 'Nova+Mono', monospace;
+  font-family: hack,monospace;
   font-weight: bold;
   font-size: 4rem;
 }
 
 h2 {
-  font-family: 'Nova+Mono', monospace;
+  font-family: hack,monospace;
   font-size: 2.5rem;
-  color: #34B99D
+  color: #34B99D;
 }
 
 h3 {
-  font-family: 'Open+Sans+Condensed', sans-serif;
-  font-size: 1.5rem;
+  font-family: hack,sans-serif;
+  font-size: 2rem;
   font-weight: bold;
+  color: #34B99D;
+}
+
+
+a:link {
+  color: #DC143C;
+  text-decoration: none
+}
+a:visited {
+  color: #DC143C;
+  text-decoration: none;
+}
+a:hover {
+    color: #FFFFFF;
+  text-decoration: none;
 }
 
 .container {

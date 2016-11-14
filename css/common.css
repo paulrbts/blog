@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font: normal 100%/1.4 Open Sans,sans-serif;
+  font-family: 'Open+Sans+Condensed:bold', sans-serif;
   color: #DCDCDC;
   background-color: #343434
 }
@@ -23,19 +23,19 @@ a:hover {
 }
 
 h1 {
-  font-family: hack,monospace;
+  font-family: 'Nova+Mono', monospace;
   font-weight: bold;
   font-size: 4rem;
 }
 
 h2 {
-  font-family: hack,monospace;
+  font-family: 'Nova+Mono', monospace;
   font-size: 2.5rem;
   color: #34B99D
 }
 
 h3 {
-  font-family: Open Sans,sans-serif;
+  font-family: 'Open+Sans+Condensed', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
 }

@@ -6,40 +6,41 @@ html {
 body {
   font: normal 100%/1.4 PT Sans,sans-serif;
   font-size: 20px;
-  color: #DCDCDC;
-  background-color: #343434
+  color: #FFFFFF;
+  background-color: #2C3F51
 }
 
 h1 {
   font-family: hack,monospace;
   font-weight: bold;
   font-size: 4rem;
+  color: #FFFFFF;
 }
 
 h2 {
   font-family: hack,monospace;
   font-size: 2.5rem;
-  color: #34B99D;
+  color: #FF9700;
 }
 
 h3 {
   font-family: hack,sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  color: #34B99D;
+  color: #20805E;
 }
 
 
 a:link {
-  color: #DC143C;
+  color: #00AB6F;
   text-decoration: none
 }
 a:visited {
-  color: #DC143C;
+  color: #00AB6F;
   text-decoration: none;
 }
 a:hover {
-    color: #FFFFFF;
+    color: #60D5AC;
   text-decoration: none;
 }
 

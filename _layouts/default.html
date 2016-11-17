@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <title>Didactic Enchainment - a simple blog on OS hacks</title>
     <link href="{{ site.baseurl }}/css/common.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:bold|Share|Patua+One|PT+Sans" rel="stylesheet">
   </head>
   <body>
 
-    <header>
-      <h1>didactic enchainment</h1>
+    <div id="wrap"></div>
+
+    <div id="header">
+      <a href="/"><h1>didactic enchainment</h1></a>
+    </div>
+
+    <div id="sidebar">
       {% include nav.html navclass='nav-top' %}
-    </header>
+    </div>
+
     <div id="main" class="container">
 
     {{ content }}

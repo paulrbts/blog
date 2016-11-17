@@ -4,32 +4,32 @@ html {
 }
 
 body {
-  font: normal 100%/1.4 PT Sans,sans-serif;
+  font: normal 100%/1.4 'PT Sans',sans-serif;
   font-size: 20px;
   color: #FFFFFF;
-  background-color: #2C3F51
+  background-color: #2C3642
 }
 
 h1 {
-  font-family: hack,monospace;
+  font-family: 'Expletus Sans',monospace;
   font-weight: bold;
   font-size: 4rem;
-  color: #FFFFFF;
+  color: #B22222;
+  padding-left: 10px;
 }
 
 h2 {
-  font-family: hack,monospace;
+  font-family: 'Share',monospace;
   font-size: 2.5rem;
   color: #FF9700;
 }
 
 h3 {
-  font-family: hack,sans-serif;
+  font-family: 'Share',sans-serif;
   font-size: 2rem;
   font-weight: bold;
   color: #20805E;
 }
-
 
 a:link {
   color: #00AB6F;
@@ -46,7 +46,7 @@ a:hover {
 
 .container {
   width:40em;
-  margin: auto;
+  margin:0 auto;
 }
 
 .current {
@@ -56,13 +56,13 @@ a:hover {
 
 .nav {
   margin: 0;
-  padding: 0;
-
+  padding-left: 40px;
   list-style-type: none;
 }
 
 .nav > li {
-  display: block;
+  margin-top: -25px;
+/*  display: block; */
 }
 
 .nav-top {
@@ -72,4 +72,20 @@ a:hover {
 
 .nav-btm {
   font-size: 1rem;
+}
+
+#wrap {
+  width:100%;
+  margin:0 auto;
+}
+
+#sidebar {
+  float:left;
+  width: 25%;
+}
+
+#main {
+  float:left;
+  width:50%;
+  text-align: left;
 }

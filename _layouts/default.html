@@ -5,7 +5,7 @@
     <title>Didactic Enchainment - a simple blog on OS hacks</title>
     <link href="{{ site.baseurl }}/css/common.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:bold|Share|Patua+One|Overpass+Mono" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="{{site.url}}/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png">
   </head>
   <body>
 
@@ -17,14 +17,6 @@
 
     <div id="sidebar">
       {% include nav.html navclass='nav-top' %}
-      {% comment %}
-        =======================
-        The purpose of this snippet is to list all the tags you have in your site.
-        =======================
-      {% endcomment %}
-      {% for tag in tags %}
-      	<a href="#{{ tag | slugify }}"> {{ tag }} </a>
-      {% endfor %}
     </div>
 
     <div id="main" class="container">

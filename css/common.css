@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  font: normal 100%/1.4 'PT Sans',sans-serif;
-  font-size: 20px;
+  font: normal 100%/1.4 'Overpass Mono',sans-serif;
+  font-size: 16px;
   color: #FFFFFF;
   background-color: #2C3642
 }
@@ -19,16 +19,16 @@ h1 {
 }
 
 h2 {
-  font-family: 'Share',monospace;
-  font-size: 2.5rem;
+  font-family: 'Patua One',monospace;
+  font-size: 3rem;
   color: #FF9700;
 }
 
 h3 {
-  font-family: 'Share',sans-serif;
+  font-family: 'Patua One',sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  color: #20805E;
+  color: #FF9700;
 }
 
 a:link {
@@ -85,7 +85,7 @@ a:hover {
 }
 
 #main {
-  float:left;
-  width:50%;
-  text-align: left;
+  width:40%;
+  margin: 0 auto;
+  text-align:left;
 }

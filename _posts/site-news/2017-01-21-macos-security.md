@@ -1,7 +1,7 @@
 ---
 layout: default
 title: macOS Security and Privacy Guide
-meta: What this site's for
+meta: Tweaking your macOS system for added security and privacy
 category: site-news
 tags: [macOS, security]
 ---

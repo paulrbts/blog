@@ -15,7 +15,7 @@ draft: true
 **{{ page.date | date_to_long_string }}**
 
 ___
-<h4>A scenario</h4>
+<h4>Scenario:</h4>
 * your entire music library is managed through iTunes
 * you have an iPhone, which syncs music from your iTunes library
 * you can listen to music from this computer, but not from devices other than your iPhone (and any other iDevices syncing to that machine)
@@ -85,7 +85,7 @@ So, on the local machine(s)
   * /Volumes/mac-server/Users/owner/Music/iTunes/iTunes Library.itl
 
 This should automatically locate the media but, if it can't, then:
-* Go to iTunes' Preferences and locate the media library:
+1. Go to iTunes' Preferences and locate the media library:
   * iTunes Preferences > Advanced > iTunes Media folder location
   * /Volumes/mac-server/Users/owner/Music/iTunes/iTunes Media
 
@@ -128,8 +128,8 @@ Now when we have a script that will cleanly open iTunes for us, we should write 
 That way, when we've finished using iTunes locally it'll leave our **mac-server** ready for the next time we use it.
 
 <h5>Reversing the thread</h5>
-Notice the syntax is subtley different in this script.
-
+Notice the syntax is subtley different in this script:
+```
     tell application "iTunes" to quit
 
     set remMachine to "eppc://owner@[IP.ADDRESS]"
@@ -137,7 +137,7 @@ Notice the syntax is subtley different in this script.
     tell application "Finder" of machine remMachine
     	open file "Macintosh HD:Applications:iTunes"
     end tell
-
+```
 Save it as "Close-iTunes.scpt" in the same location as the *Open* script.
 
 1. Open *Automator*
@@ -152,6 +152,7 @@ Save it as "Close-iTunes.scpt" in the same location as the *Open* script.
 4. Save as an Application called something like "Open iTunes"
 
 Now for closing it down:
+
 1. Create a new Automator document
 2. Go to *Actions > Utilities* and select *Run AppleScript*
 3. Paste this code:

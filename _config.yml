@@ -3,4 +3,4 @@ exclude: ['README.md']
 permalink: pretty
 
 # Conversion
-markdown: pygments
+markdown: kramdown

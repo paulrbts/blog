@@ -77,7 +77,8 @@ We need to tell the local instance of iTunes to look to the remote .itl file *an
 The problem here, hinted at above, is that only one instance at a time can use that file.
 You can't have iTunes open on the **mac-server** and then open it on another machine, pointing to the same .itl -- this will throw you an error.
 
-So, on the local machine(s)
+So, on the local machine(s):
+
 1. Quit iTunes locally
 2. Mount the remote volume, if it isn't already
 2. Hold *Alt* while opening iTunes
@@ -85,6 +86,7 @@ So, on the local machine(s)
   * /Volumes/mac-server/Users/owner/Music/iTunes/iTunes Library.itl
 
 This should automatically locate the media but, if it can't, then:
+
 1. Go to iTunes' Preferences and locate the media library:
   * iTunes Preferences > Advanced > iTunes Media folder location
   * /Volumes/mac-server/Users/owner/Music/iTunes/iTunes Media
@@ -93,6 +95,7 @@ This should automatically locate the media but, if it can't, then:
 
 1. Open *Applescript Editor*
 2. Insert the following code, editing it to match the IP address of **mac-server**:
+
 ```
     tell application "iTunes" of machine "eppc://[IP.ADDRESS]"
 
@@ -111,6 +114,7 @@ This should automatically locate the media but, if it can't, then:
     	activate
     end tell
 ```
+
 3. Compile it to check for errors
     * Click the hammer
 
@@ -119,6 +123,7 @@ Save the script somewhere on you local machine somewhere logical, as you want to
 Call it something like "Open-iTunes.scpt".
 
 Here's what you just did:
+
 1. Quit iTunes on the remote machine
 2. Waited 2 seconds (this is optional)
 3. Mounted the media library of the remote machine
@@ -129,6 +134,7 @@ That way, when we've finished using iTunes locally it'll leave our **mac-server*
 
 <h5>Reversing the thread</h5>
 Notice the syntax is subtley different in this script:
+
 ```
     tell application "iTunes" to quit
 
@@ -138,17 +144,22 @@ Notice the syntax is subtley different in this script:
     	open file "Macintosh HD:Applications:iTunes"
     end tell
 ```
+
 Save it as "Close-iTunes.scpt" in the same location as the *Open* script.
 
 1. Open *Automator*
 2. Go to *Actions > Utilities* and select *Run AppleScript*
 3. Paste this code:
+
+```
     on run {input, parameters}
 
     	(run script "/path/to/Open-iTunes.scpt")
 
     	return input
     end run
+```
+
 4. Save as an Application called something like "Open iTunes"
 
 Now for closing it down:

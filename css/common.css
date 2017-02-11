@@ -15,7 +15,7 @@ h1 {
   font-family: 'Expletus Sans',monospace;
   font-weight: bold;
   font-size: 4rem;
-  color: #2F4F4F;
+  color: #23525F;
   padding-left: 40px;
 }
 
@@ -107,13 +107,13 @@ ul {
 }
 
 #navbar a:link {
-  color: #2F4F4F !important;
+  color: #23525F !important;
 }
 #navbar a:visited {
-  color: #2F4F4F !important;
+  color: #23525F !important;
 }
 #navbar a:hover {
-  color: #2F4F4F !important;
+  color: #23525F !important;
 }
 
 #main {

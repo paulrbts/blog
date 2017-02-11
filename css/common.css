@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font: normal 100%/1.6 'Overpass Mono',sans-serif;
+  font: normal 100%/1.6 'Overpass Mono',monospace;
   font-size: 16px;
   color: #4d4d4d;
   background-color: #F5F5F5;
@@ -30,6 +30,20 @@ h3 {
   font-size: 2rem;
   font-weight: bold;
   color: #464C54;
+}
+
+h4 {
+  font: 'Overpass Mono',monospace;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  font-weight: 700;
+}
+
+h5 {
+  font: 'Overpass Mono',monospace;
+  font-size: 18px;
+  color: #4d4d4d;
 }
 
 a:link {

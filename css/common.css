@@ -22,7 +22,7 @@ h1 {
 h2 {
   font-family: 'Patua One',monospace;
   font-size: 3rem;
-  color: #464C54;
+  color: #112D2D;
 }
 
 h3 {
@@ -117,7 +117,12 @@ ul {
 }
 
 #main {
-  width:40%;
+  width:50%;
   margin: 0 auto;
   text-align: left;
+}
+
+#footer {
+  padding-left: 40px;
+  font-size: 14px;
 }

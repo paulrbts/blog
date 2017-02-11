@@ -2,27 +2,30 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8">
-    <title>Didactic Enchainment - a simple blog on OS hacks</title>
+    <title>Didactic Enchainment</title>
+    <meta name="Author" content="Paul Roberts">
+    <meta name="Description" content="a simple blog on OS hacks">
+    <meta name="Keywords" content="macos, mac, os x, freebsd, bsd, unix, hacks, tips">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ site.baseurl }}/css/common.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:bold|Share|Patua+One|Overpass+Mono" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
   </head>
   <body>
 
-    <div id="wrap"></div>
+    <div id="wrap">
+    </div>
 
     <div id="header">
       <a href="/blog"><h1>didactic enchainment</h1></a>
     </div>
 
-    <div id="sidebar">
+    <div id="navbar">
       {% include nav.html navclass='nav-top' %}
     </div>
 
     <div id="main" class="container">
-
-    {{ content }}
-
+      {{ content }}
     </div>
 
   <footer>

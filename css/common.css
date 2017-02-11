@@ -6,42 +6,50 @@ html {
 body {
   font: normal 100%/1.6 'Overpass Mono',sans-serif;
   font-size: 16px;
-  color: #FFFFFF;
-  background-color: #2C3642
+  color: #4d4d4d;
+  background-color: #F5F5F5;
 }
 
 h1 {
+  text-align: left;
   font-family: 'Expletus Sans',monospace;
   font-weight: bold;
   font-size: 4rem;
-  color: #B22222;
-  padding-left: 10px;
+  color: #2F4F4F;
+  padding-left: 40px;
 }
 
 h2 {
   font-family: 'Patua One',monospace;
   font-size: 3rem;
-  color: #FF9700;
+  color: #464C54;
 }
 
 h3 {
   font-family: 'Patua One',sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  color: #FF9700;
+  color: #464C54;
 }
 
 a:link {
-  color: #00AB6F;
+  color: #AC082E;
   text-decoration: none
 }
 a:visited {
-  color: #00AB6F;
+  color: #AC082E;
   text-decoration: none;
 }
 a:hover {
-    color: #60D5AC;
+    color: #AC082E;
   text-decoration: none;
+}
+
+ul {
+ list-style: disc;
+ margin-left: 1em;
+ padding-left: 1em;
+ text-indent: 0;
 }
 
 .container {
@@ -67,7 +75,7 @@ a:hover {
 
 .nav-top {
   color: #DCDCDC;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .nav-btm {
@@ -79,13 +87,23 @@ a:hover {
   margin:0 auto;
 }
 
-#sidebar {
+#navbar {
   float:left;
-  width: 25%;
+  width: auto;
+}
+
+#navbar a:link {
+  color: #2F4F4F !important;
+}
+#navbar a:visited {
+  color: #2F4F4F !important;
+}
+#navbar a:hover {
+  color: #2F4F4F !important;
 }
 
 #main {
   width:40%;
   margin: 0 auto;
-  text-align:left;
+  text-align: left;
 }

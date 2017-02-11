@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Wilkommen
 ---
 <head>
   <style type="text/css">
@@ -10,20 +9,18 @@ title: Wilkommen
   </style>
 </head>
 
-<h2>Wilkommen</h2>
+<h2>Open file...</h2>
 
-<p>This is my personal blog where I'll be talking about modifications and hacks I discover. It'll probably be:
-  <ul>
-    <li>FreeBSD</li>
-    <li>macOS/OS X</li>
-    <li>LaTeX</li>
-    <li>R</li>
-  </ul>
-Other things may come along, just depends how I'm feeling and what I'm exploring at any given time.
-And whether or not I can be bothered, or feel the need, to write about.
-I don't intend to overtly proselytise about my methods <i>etc.</i>, rather to document and share some of my findings, mainly so I can be sure I understand them by re-iterating them.</p>
-
-<h3>To use this site</h3>
-<p>Browse directories on the left, select a file to view its contents.</p>
-<br>
-<p>If you're using Internet Explorer or Edge, <a target="_blank" href="https://www.freebsd.org/where.html">click here</a> or <a target="_blank" href="https://www.trueos.org/">here</a>.</p>
+<p>
+<ul>
+  {% for post in site.categories.site-news limit:10 %}
+    <li style="list-style-type: none">
+      <p> </p>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.meta }}</p>
+      <a href="{{ site.baseurl }}{{ post.url }}">More</a>
+      <p> </p>
+    </li>
+  {% endfor %}
+</ul>
+</p>

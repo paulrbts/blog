@@ -19,7 +19,9 @@ The official documentation for Jekyll says that it:
 > *has built-in support for syntax highlighting of code snippets using either Pygments or Rouge, and including a code snippet in any post is easy. Just use the dedicated Liquid tag as follows:*
 
 <center>
+<a href="{{ site.baseurl }}/images/jekyllSyntaxScrot.png">
 <img src="{{ site.baseurl }}/images/jekyllSyntaxScrot.png" alt="Jekyll's expected output" width="50%">
+</a>
 </center>
 
 Now, if you're new to Jekyll and you follow these instructions, it might not work. Here's why:

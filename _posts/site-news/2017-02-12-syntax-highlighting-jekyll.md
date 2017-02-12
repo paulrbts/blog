@@ -41,7 +41,7 @@ Make sure your *_config.yml* is correct:
       input: GFM
       hard_wrap: false
       syntax_highlighter: rouge
-    extensions: fenced_code_blocks
+      extensions: fenced_code_blocks
 {% endhighlight %}
 
 And finally, when you use fenced code blocks, use 4-spaces before each line of code. Jekyll's local build was recognising this as code without the 4-spaces but the commit to Github seemed to strip it out.

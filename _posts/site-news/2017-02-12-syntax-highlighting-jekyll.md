@@ -33,8 +33,8 @@ Because you're referring to a new stylesheet, you need to call this in your *_la
     <link href="/css/syntax.css" rel="stylesheet">
 ```
 
-Make sure your `_config.yml` is correct:
-``` markdown
+Make sure your *_config.yml* is correct:
+```
     markdown: kramdown
     highlighter: rouge
     kramdown:

@@ -169,4 +169,4 @@ Now for closing it down:
 ```
 Save it as an *Application* called something like "Close iTunes".
 
-You can make this more convenient by removing the local instance of iTunes from your Dock and replacing it with these two Automator applications. It can also help to use the iTunes icon for the icons of these applications, as a quick reminder. Finally, just make sure iTunes is running on the **mac-server** so the script will execute properly.
+You can make this more convenient by removing the local instance of iTunes from your Dock and replacing it with these two Automator applications. It can also help to use the iTunes icon for the icons of these applications, as a quick reminder. Finally, just make sure iTunes is running on the **mac-server** so the script will run.

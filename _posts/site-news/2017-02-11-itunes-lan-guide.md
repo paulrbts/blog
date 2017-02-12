@@ -123,6 +123,7 @@ Now when we have a script that will cleanly open iTunes for us, we should write 
 
 <h5>Reversing the thread</h5>
 1. Create a new file in *Applescript Editor*, notice the syntax is subtley different this time:
+
 ```applescript
     tell application "iTunes" to quit
 

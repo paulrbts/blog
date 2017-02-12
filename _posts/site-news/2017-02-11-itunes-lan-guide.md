@@ -116,7 +116,7 @@ ___
 1. Open *Applescript Editor*
 2. Insert the following code, editing it to match the IP address of **mac-server**:
 
-{% highlight applescript %}
+```applescript
     tell application "iTunes" of machine "eppc://[IP.ADDRESS]"
 
     	quit
@@ -133,7 +133,7 @@ ___
     tell application "iTunes"
     	activate
     end tell
-{% endhighlight %}
+```
 3. Compile it to check for errors
     * Click the hammer
 

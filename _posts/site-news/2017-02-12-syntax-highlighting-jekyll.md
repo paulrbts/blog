@@ -16,8 +16,7 @@ tags: [jekyll, github]
 ___
 The official documentation for Jekyll says that it:
 
-> *has built-in support for syntax highlighting of code snippets using either Pygments or Rouge, and including a code snippet in any post is easy.
-Just use the dedicated Liquid tag as follows:*
+> *has built-in support for syntax highlighting of code snippets using either Pygments or Rouge, and including a code snippet in any post is easy. Just use the dedicated Liquid tag as follows:*
 
 <center>
 <img src="{{ site.baseurl }}/images/jekyllSyntaxScrot.png" alt="Jekyll's expected output" width="50%">
@@ -25,15 +24,15 @@ Just use the dedicated Liquid tag as follows:*
 
 Now, if you're new to Jekyll and you follow these instructions, it might not work. Here's why:
 
-Jekyll recognises that there's code there but doesn't know what colours to use.
-You need a [stylesheet detailing the css](https://gist.githubusercontent.com/demisx/025698a7b5e314a7a4b5/raw/d2086c7f59105db4da1ed8d1df8d8586666f66ea/syntax.css) for that.
-Save it to your css directory as *syntax.css*
+Jekyll recognises that there's code there but doesn't know what colours to use. You need a [stylesheet detailing the css](https://gist.githubusercontent.com/demisx/025698a7b5e314a7a4b5/raw/d2086c7f59105db4da1ed8d1df8d8586666f66ea/syntax.css) for that, and save it to your css directory as *syntax.css*
 
 Because you're referring to a new stylesheet, you need to call this in your *_layouts/default.html* head, as follows:
 
 ``` html
-    <link href="{{ site.basurl }}/css/syntax.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
 ```
+
+This needs to include "site.baseurl" in double curly braces at the start of the address. I have included it but for some reason it's being stripped out.
 
 Make sure your *_config.yml* is correct:
 

@@ -25,7 +25,7 @@ Now, if you're new to Jekyll and you follow these instructions, it might not wor
 
 Jekyll recognises that there's code there but doesn't know what colours to use.
 You need a [stylesheet detailing the css](https://gist.githubusercontent.com/demisx/025698a7b5e314a7a4b5/raw/d2086c7f59105db4da1ed8d1df8d8586666f66ea/syntax.css) for that.
-Save it to your css directory as syntax.css
+Save it to your css directory as *syntax.css*
 
 Because you're referring to a new stylesheet, you need to call this in your *_layouts/default.html* head, as follows:
 

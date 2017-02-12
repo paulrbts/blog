@@ -17,6 +17,7 @@ h1 {
   font-size: 4rem;
   color: #23525F;
   padding-left: 40px;
+  max-width: 90%;
 }
 
 h2 {
@@ -117,7 +118,8 @@ ul {
 }
 
 #main {
-  width:50%;
+  width:500px;
+  max-width: 95%;
   margin: 0 auto;
   text-align: left;
 }

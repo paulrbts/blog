@@ -30,18 +30,20 @@ Save it to your css directory as *syntax.css*
 Because you're referring to a new stylesheet, you need to call this in your *_layouts/default.html* head, as follows:
 
 ``` html
-<link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
 ```
 
-Lastly, just make sure your `_config.yml` is correct:
+Make sure your `_config.yml` is correct:
 ```
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
-extensions: fenced_code_blocks
+    markdown: kramdown
+    highlighter: rouge
+    kramdown:
+      input: GFM
+      hard_wrap: false
+      syntax_highlighter: rouge
+    extensions: fenced_code_blocks
 ```
 
-Thanks to [@demisx for the post](https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html) on this.
+And finally, when you use fenced code blocks, use 4-spaces before each line of code. Jekyll's local build was recognising this as code without the 4-spaces but the commit to Github seemed to strip it out.
+
+Thanks to [@demisx for his post](https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html) on this issue, the only one I could find that actually helped.

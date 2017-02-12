@@ -72,6 +72,7 @@ Your machine needs to be awake whenever you try and access it, so either keep it
 
 <h5>Remote machine</h5>
 Put yourself behind this machine and prep it as follows:
+
 1. Enable *File Sharing* (just the ~/Music folder for security):
     * System Preferences > Sharing > File Sharing
     * *Only these users* > [owner] > *Read & Write*

@@ -3,39 +3,71 @@ html {
   padding: 0;
 }
 
+@media all and (min-width: 720px) {
 body {
   font: normal 100%/1.6 'Overpass Mono',monospace;
   font-size: 16px;
   color: #4d4d4d;
   background-color: #F5F5F5;
 }
+}
 
+@media all and (max-width: 719px) and (min-width: 400px) {
+body {
+  font: normal 100%/1.6 'Overpass Mono',monospace;
+  font-size: 14px;
+  color: #4d4d4d;
+  background-color: #F5F5F5;
+}
+}
+
+@media all and (max-width: 399px) and (min-width: 320px) {
+body {
+  font: normal 100%/1.6 'Overpass Mono',monospace;
+  font-size: 14px;
+  color: #4d4d4d;
+  background-color: #F5F5F5;
+}
+}
+
+@media all and (min-width: 450px) {
 h1 {
   text-align: left;
   font-family: 'Expletus Sans',monospace;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 4em;
   color: #23525F;
-  padding-left: 40px;
-  max-width: 90%;
+  padding-left: 2%;
+}
+}
+
+@media all and (max-width: 440px) and (min-width: 320px) {
+h1 {
+  text-align: left;
+  font-family: 'Expletus Sans',monospace;
+  font-weight: bold;
+  font-size: 2em;
+  color: #23525F;
+  padding-left: 2%;
+}
 }
 
 h2 {
   font-family: 'Patua One',monospace;
-  font-size: 3rem;
+  font-size: 3em;
   color: #112D2D;
 }
 
 h3 {
   font-family: 'Patua One',sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: bold;
   color: #464C54;
 }
 
 h4 {
   font: 'Overpass Mono',monospace;
-  font-size: 20px;
+  font-size: 1.5em;
   text-transform: uppercase;
   color: #4d4d4d;
   font-weight: 700;
@@ -43,8 +75,13 @@ h4 {
 
 h5 {
   font: 'Overpass Mono',monospace;
-  font-size: 18px;
+  font-size: 1.4em;
   color: #4d4d4d;
+}
+
+p{
+	font-size: 1em;
+	line-height: 1.618em;
 }
 
 a:link {
@@ -118,13 +155,12 @@ ul {
 }
 
 #main {
-  width:500px;
+  width: 800px;
   max-width: 95%;
   margin: 0 auto;
   text-align: left;
 }
 
 #footer {
-  padding-left: 40px;
-  font-size: 14px;
+  font-size: 0.8em;
 }

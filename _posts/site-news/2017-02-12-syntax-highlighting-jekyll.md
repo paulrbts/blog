@@ -34,7 +34,7 @@ Because you're referring to a new stylesheet, you need to call this in your *_la
 ```
 
 Make sure your *_config.yml* is correct:
-``` yaml
+{% highlight yaml %}
     markdown: kramdown
     highlighter: rouge
     kramdown:
@@ -42,7 +42,7 @@ Make sure your *_config.yml* is correct:
       hard_wrap: false
       syntax_highlighter: rouge
     extensions: fenced_code_blocks
-```
+{% endhighlight %}
 
 And finally, when you use fenced code blocks, use 4-spaces before each line of code. Jekyll's local build was recognising this as code without the 4-spaces but the commit to Github seemed to strip it out.
 

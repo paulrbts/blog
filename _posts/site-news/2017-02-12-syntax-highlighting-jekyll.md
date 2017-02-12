@@ -36,6 +36,7 @@ Because you're referring to a new stylesheet, you need to call this in your *_la
 ```
 
 Make sure your *_config.yml* is correct:
+
 ``` yaml
     markdown: kramdown
     highlighter: rouge

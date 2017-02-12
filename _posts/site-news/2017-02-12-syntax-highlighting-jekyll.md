@@ -19,7 +19,9 @@ The official documentation for Jekyll says that it:
 > *has built-in support for syntax highlighting of code snippets using either Pygments or Rouge, and including a code snippet in any post is easy.
 Just use the dedicated Liquid tag as follows:*
 
-![Jekyll's output]({{ site.baseurl }}/images/jekyllSyntaxScrot.png)
+<center>
+<img src="{{ site.baseurl }}/images/jekyllSyntaxScrot.png" alt="Jekyll's expected output" width="50%">
+</center>
 
 Now, if you're new to Jekyll and you follow these instructions, it might not work. Here's why:
 
@@ -30,11 +32,10 @@ Save it to your css directory as *syntax.css*
 Because you're referring to a new stylesheet, you need to call this in your *_layouts/default.html* head, as follows:
 
 ``` html
-    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="{{ site.basurl }}/css/syntax.css" rel="stylesheet">
 ```
 
 Make sure your *_config.yml* is correct:
-<<<<<<< HEAD
 ``` yaml
     markdown: kramdown
     highlighter: rouge
@@ -44,18 +45,7 @@ Make sure your *_config.yml* is correct:
       syntax_highlighter: rouge
       extensions: fenced_code_blocks
 ```
-=======
-{% highlight markdown %}
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
-  extensions: fenced_code_blocks
-{% endhighlight %}
->>>>>>> 0174f6578e5cf81cff0df6c1b7cb484f84ff5aaf
 
 And finally, when you use fenced code blocks, use 4-spaces before each line of code. Jekyll's local build was recognising this as code without the 4-spaces but the commit to Github seemed to strip it out.
 
-Thanks to [@demisx for his post](https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html) on this issue, the only one I could find that actually helped.
+Thanks to [@demisx for his post](https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html) and [talk.jekyllrb.com](talk.jekyllrb) user @rdyar on this issue.

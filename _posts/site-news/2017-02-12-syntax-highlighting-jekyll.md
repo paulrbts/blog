@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syntax highlighting in a Jekyll blog
-meta: Jekyll and Github Pages support syntax highlighting 'out of the box', but it doesn't work unless you've set it up properly.
+meta: Jekyll and Github Pages claim to support syntax highlighting 'out of the box', but it doesn't work unless you've set it up properly.
 category: site-news
 tags: [jekyll, github]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: macOS Security and Privacy Guide
 meta: Dr Duh wrote a thorough guide on macOS security with changes and modifications to improve the security of your system. There's a lot to go over but it's worth it.
-category: site-news
+category: os
 tags: [macOS, security]
 ---
 <h3 class="page.title">

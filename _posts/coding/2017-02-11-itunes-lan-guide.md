@@ -2,7 +2,7 @@
 layout: post
 title: Shared iTunes Library on LAN Tutorial
 meta: Sharing an iTunes library across the network for multiple audio output options. Use a single iTunes library for multiple devices, and listen to music on different areas of the network.
-category: site-news
+category: coding
 tags: [macOS, audio]
 draft: true
 ---

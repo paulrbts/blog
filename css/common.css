@@ -103,7 +103,18 @@ ul {
  list-style: disc;
  margin-left: 2em;
  padding-left: 1em;
- text-indent: 0;
+ text-indent: 0em;
+ font-size: 1.1em;
+ font-weight: 300;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 2em;
+  padding-left: 1em;
+  text-indent: 03m;
+  font-size: 1.1em;
+  font-weight: 300;
 }
 
 blockquote {

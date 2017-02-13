@@ -13,7 +13,6 @@ category: site-news
 **{{ page.date | date_to_long_string }}**
 
 ___
-<br>
 Here's my first blog post. It's just a test post.
 
 Nothing more to see here...

@@ -93,22 +93,22 @@ ___
 2. Insert the following code, editing it to match the IP address and file sharing  of **mac-server** that you gathered earlier:
 
 ```applescript
-    tell application "iTunes" of machine "eppc://[IP.ADDRESS]"
+tell application "iTunes" of machine "eppc://[IP.ADDRESS]"
 
-    	quit
-    end tell
+	quit
+end tell
 
-    delay 2
+delay 2
 
-    tell application "Finder"
-    	try
-    		mount volume "[afp://mac-server.local/owner]"
-    	end try
-    end tell
+tell application "Finder"
+	try
+		mount volume "[afp://mac-server.local/owner]"
+	end try
+end tell
 
-    tell application "iTunes"
-    	activate
-    end tell
+tell application "iTunes"
+	activate
+end tell
 ```
 Now just compile it to check for errors by clicking the hammer. It will ask for the password of the **owner** on the **mac-server**. Save the script somewhere on you local machine somewhere logical, as you want to save it and forget it. Call it something like "Open-iTunes.scpt".
 
@@ -125,13 +125,13 @@ Now when we have a script that will cleanly open iTunes for us, we should write 
 1. Create a new file in *Applescript Editor*, notice the syntax is subtley different this time:
 
 ```applescript
-    tell application "iTunes" to quit
+tell application "iTunes" to quit
 
-    set remMachine to "eppc://owner@[IP.ADDRESS]"
+set remMachine to "eppc://owner@[IP.ADDRESS]"
 
-    tell application "Finder" of machine remMachine
-    	open file "Macintosh HD:Applications:iTunes"
-    end tell
+tell application "Finder" of machine remMachine
+	open file "Macintosh HD:Applications:iTunes"
+end tell
 ```
 
 Save it as "Close-iTunes.scpt" in the same location as the *Open* script.
@@ -143,12 +143,12 @@ Save it as "Close-iTunes.scpt" in the same location as the *Open* script.
 3. Paste this code:
 
 ```
-    on run {input, parameters}
+on run {input, parameters}
 
-    	(run script "/path/to/Open-iTunes.scpt")
+	(run script "/path/to/Open-iTunes.scpt")
 
-    	return input
-    end run
+	return input
+end run
 ```
 
 Save it as an Application called something like "Open iTunes".
@@ -160,12 +160,12 @@ Now for closing it down:
 3. Paste this code:
 
 ```
-    on run {input, parameters}
+on run {input, parameters}
 
-    	(run script "/path/to/Close-iTunes.scpt")
+	(run script "/path/to/Close-iTunes.scpt")
 
-    	return input
-    end run
+	return input
+end run
 ```
 Save it as an *Application* called something like "Close iTunes".
 

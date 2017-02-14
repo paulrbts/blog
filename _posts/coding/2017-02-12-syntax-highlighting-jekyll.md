@@ -31,7 +31,7 @@ Jekyll recognises that there's code there but doesn't know what colours to use. 
 Because you're referring to a new stylesheet, you need to call this in your *_layouts/default.html* head, as follows:
 
 ``` html
-    <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
 ```
 
 This needs to include "site.baseurl" in double curly braces at the start of the address. I have included it but for some reason it's being stripped out.
@@ -39,13 +39,13 @@ This needs to include "site.baseurl" in double curly braces at the start of the 
 Make sure your *_config.yml* is correct:
 
 ``` yaml
-    markdown: kramdown
-    highlighter: rouge
-    kramdown:
-      input: GFM
-      hard_wrap: false
-      syntax_highlighter: rouge
-      extensions: fenced_code_blocks
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  extensions: fenced_code_blocks
 ```
 
 And finally, when you use fenced code blocks, use 4-spaces before each line of code. Jekyll's local build was recognising this as code without the 4-spaces but the commit to Github seemed to strip it out.

@@ -4,7 +4,6 @@ title: Shared iTunes Library on LAN Tutorial
 meta: Sharing an iTunes library across the network for multiple audio output options. Use a single iTunes library for multiple devices, and listen to music on different areas of the network.
 category: coding
 tags: [macOS, audio]
-draft: true
 ---
 <h3 class="page.title">
   {% if page.title %}
@@ -13,7 +12,7 @@ draft: true
 </h3>
 
 **{{ page.date | date_to_long_string }}**
-
+{% include post-categories.html %}
 ___
 <h4>Scenario:</h4>
 * your entire music library is managed through iTunes

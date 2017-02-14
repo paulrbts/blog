@@ -14,4 +14,5 @@ tags: [macOS, security]
 **{{ page.date | date_to_long_string }}**
 
 ___
-Dr Duh wrote a [thorough guide on macOS security](https://github.com/drduh/macOS-Security-and-Privacy-Guide) which covers various and deep changes and modifications to macOS with a view to improving the security of your system. There's a lot to go over but it's worth it.
+Dr Duh wrote a [thorough guide on macOS security](https://github.com/drduh/macOS-Security-and-Privacy-Guide) which covers various and deep changes and modifications to macOS with a view to improving the security of your system.
+There's a lot to go over but it's worth it.

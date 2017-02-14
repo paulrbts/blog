@@ -24,9 +24,11 @@ The official documentation for Jekyll says that it:
 > </a>
 > </center>
 
-Now, if you're new to Jekyll and you follow these instructions, it might not work. Here's why:
+Now, if you're new to Jekyll and you follow these instructions, it might not work.
+Here's why:
 
-Jekyll recognises that there's code there but doesn't know what colours to use. You need a [stylesheet detailing the css](https://gist.githubusercontent.com/demisx/025698a7b5e314a7a4b5/raw/d2086c7f59105db4da1ed8d1df8d8586666f66ea/syntax.css) for that, and save it to your css directory as *syntax.css*
+Jekyll recognises that there's code there but doesn't know what colours to use.
+You need a [stylesheet detailing the css](https://gist.githubusercontent.com/demisx/025698a7b5e314a7a4b5/raw/d2086c7f59105db4da1ed8d1df8d8586666f66ea/syntax.css) for that, and save it to your css directory as *syntax.css*
 
 Because you're referring to a new stylesheet, you need to call this in your *_layouts/default.html* head, as follows:
 
@@ -34,7 +36,8 @@ Because you're referring to a new stylesheet, you need to call this in your *_la
 <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
 ```
 
-This needs to include "site.baseurl" in double curly braces at the start of the address. I have included it but for some reason it's being stripped out.
+This needs to include "site.baseurl" in double curly braces at the start of the address.
+I have included it but for some reason it's being stripped out.
 
 Make sure your *_config.yml* is correct:
 
@@ -48,6 +51,7 @@ kramdown:
   extensions: fenced_code_blocks
 ```
 
-And finally, when you use fenced code blocks, use 4-spaces before each line of code. Jekyll's local build was recognising this as code without the 4-spaces but the commit to Github seemed to strip it out.
+And finally, when you use fenced code blocks, use 4-spaces before each line of code.
+Jekyll's local build was recognising this as code without the 4-spaces but the commit to Github seemed to strip it out.
 
 Thanks to [@demisx for his post](https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html) and [talk.jekyllrb.com](talk.jekyllrb) user @rdyar on this issue.

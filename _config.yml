@@ -7,6 +7,6 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  hard_wrap: true
+  hard_wrap: false
   syntax_highlighter: rouge
   extensions: fenced_code_blocks

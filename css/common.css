@@ -139,6 +139,7 @@ blockquote p {
   text-decoration: none;
 }
 
+/*
 .nav {
   margin: 0;
   padding-left: 40px;
@@ -147,7 +148,6 @@ blockquote p {
 
 .nav > li {
   margin-top: -25px;
-/*  display: block; */
 }
 
 .nav-top {
@@ -157,11 +157,6 @@ blockquote p {
 
 .nav-btm {
   font-size: 1rem;
-}
-
-#wrap {
-  width:100%;
-  margin:0 auto;
 }
 
 #navbar {
@@ -177,6 +172,12 @@ blockquote p {
 }
 #navbar a:hover {
   color: #23525F !important;
+}
+*/
+
+#wrap {
+  width:100%;
+  margin:0 auto;
 }
 
 #main {

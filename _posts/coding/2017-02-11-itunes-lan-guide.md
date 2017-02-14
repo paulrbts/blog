@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shared iTunes Library on LAN Tutorial
+title: Shared iTunes Library on LAN - Tutorial
 meta: Sharing an iTunes library across the network for multiple audio output options. Use a single iTunes library for multiple devices, and listen to music on different areas of the network.
 category: coding
 tags: [macOS, audio]
@@ -201,5 +201,5 @@ end run
 Save it as an *Application* called something like "Close iTunes".
 
 You can make this more convenient by removing the local instance of iTunes from your Dock and replacing it with these two Automator applications.
-It can also help to use the iTunes icon for the icons of these applications, as a quick reminder. 
+It can also help to use the iTunes icon for the icons of these applications, as a quick reminder.
 Finally, just make sure iTunes is running on the **mac-server** so the script will run.

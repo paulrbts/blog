@@ -68,7 +68,7 @@ h3 {
 h4 {
   font: 'Overpass Mono',monospace;
   font-size: 1.5em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #4d4d4d;
   font-weight: 700;
 }

@@ -57,13 +57,23 @@ ssh-keygen -t rsa
 ```
 When prompted, just hit `enter` instead of using a passphrase.
 This generates your `id_rsa` (private, not be shared with anyone) and `id_rsa.pub` (public, to be shared with your servers) keys.
-Now, copy the public key onto the server using the secure copy programme:
+Now, copy the public key onto the server.
+For the first key, we can do this using the secure copy programme:
 
 ```zsh
 scp ~/.ssh/id_rsa.pub user@remote_server.com:.ssh/authorized_keys
 ```
 This says: securely copy my public key to `authorized_keys` folder on the server, owned by that user.
 This means you'll be able to log in as that user, and that user only, so make sure you substitute the required user on your server in the above command.
+
+If you're adding keys to the server, then the above command will write over what's already in there.
+You have to use the following command to append to the file:
+
+```zsh
+cat ~/.ssh/id_rsa.pub | ssh user@remote_server "cat >> .ssh/authorized_keys"
+```
+Thsi says: read (`cat`) the contents of `~/.ssh/id_rsa.pub` and send it (`|`) via ssh as this user, to this machine, then print the contents to the `.ssh/authorized_keys` file.
+Writing to files using the redirect `>>` will append it to the file, rather than over-writing the contents.
 
 Make sure you're in your home folder and check your permissions are correct:
 

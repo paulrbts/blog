@@ -35,9 +35,10 @@ h1 {
   text-align: left;
   font-family: 'Expletus Sans',monospace;
   font-weight: bold;
-  font-size: 4em;
+  font-size: 2em;
   color: #23525F;
   padding-left: 2%;
+  display: inline;
 }
 }
 
@@ -46,14 +47,15 @@ h1 {
   text-align: left;
   font-family: 'Expletus Sans',monospace;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1em;
   color: #23525F;
   padding-left: 2%;
+  display: inline;
 }
 }
 
 h2 {
-  font-family: 'Patua One',monospace;
+  font-family: 'Patua One',sans-serif;
   font-size: 3em;
   color: #112D2D;
 }
@@ -100,13 +102,31 @@ a:hover {
 }
 
 ul {
- list-style: disc;
+ list-style-type: disc;
  margin-left: 2em;
  padding-left: 1em;
  text-indent: 0em;
  font-size: 1.1em;
  font-weight: 300;
 }
+
+/*
+li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 10px
+}
+
+ul li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: FontAwesome;
+  font-size: .8em;
+  content: "\f1db";
+  color: #AC082E;
+}
+*/
 
 ol {
   list-style: decimal;
@@ -138,6 +158,7 @@ blockquote p {
   color: #34B99D;
   text-decoration: none;
 }
+
 
 /*
 .nav {
@@ -188,5 +209,35 @@ blockquote p {
 }
 
 #footer {
-  font-size: 0.8em;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 120px;
+  background: #1E2224;
+  font-size: 1.5em;
+  color: #F5F5F5;
+  text-align: right;
+}
+
+#header {
+  font-size: 2em;
+}
+#header ul {
+  a:link {
+    color: #F5F5F5;
+    text-decoration: none
+  }
+  a:visited {
+    color: #F5F5F5;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #F5F5F5;
+    text-decoration: none;
+  }
+}
+#header ul li {
+
+  display: block;
+  padding-left: 0px;
 }

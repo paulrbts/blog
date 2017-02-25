@@ -2,27 +2,28 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8">
-    <title>Didactic Enchainment</title>
+    <title>bryophyticOS</title>
     <meta name="Author" content="Paul Roberts">
-    <meta name="Description" content="a simple blog on OS hacks">
+    <meta name="Description" content="a simple blog on OS hacks and coding tips">
     <meta name="Keywords" content="macos, mac, os x, freebsd, bsd, unix, hacks, tips">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ site.baseurl }}/css/common.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:bold|Share|Patua+One|Overpass+Mono|Anonymous+Pro|Fira+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:bold|Patua+One|Overpass+Mono|Fira+Sans+Condensed:300" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
 
     <div id="header">
-      <a href="/blog"><h1>didactic enchainment</h1></a>
+      {% include header.html %}
     </div>
 
     <div id="main" class="container">
       {{ content }}
     </div>
 
-    <style type="text/css">
+    <!--<style type="text/css">
       #footer {
         position: relative;
         bottom: 0;
@@ -31,9 +32,10 @@
         text-align: center;
       }
     </style>
+  -->
 
     <div id="footer">
-      If you're using Internet Explorer or Edge, <a target="_blank" href="https://www.freebsd.org/where.html">click here</a> or <a target="_blank" href="https://www.trueos.org/">here</a>.
+
     </div>
 
   </body>

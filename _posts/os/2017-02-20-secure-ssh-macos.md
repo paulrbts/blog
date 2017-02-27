@@ -16,7 +16,7 @@ tags: [mac, security, admin]
 ___
 #### *Another* SSH keys guide?
 Many of the guides I have read on this subject seem to have some shortcoming or other to give me the confidence for my needs: they cover Linux; they don't explain enough about different parts, *etc.*
-As with other elements of this blog, this also acts as a reminder for me in the future if I'm doing it again, so I don't look at $search.engine and find I'm not happy with the results.
+As with other elements of this blog, this also acts as a reminder for me in the future if I'm doing it again, so I don't look at $SEARCH.ENGINE and find I'm not happy with the results.
 
 The whole point of SSH keys is to make it quicker to log in to remote machines.
 The danger of anything which makes processes quicker (convenience) is that they usually compromise security.
@@ -33,7 +33,7 @@ When we're done, it'll be more like this:
 ```zsh
 ssh lemmein
 ```
-and it'll actually be stronger than before, because it won't rely on -- neigh, be able to be brute-forced by -- a password.
+and it'll actually be stronger than before, because it won't rely on -- nay, be able to be brute-forced by -- a password.
 Not only is it quicker because it doesn't rely on the time you take to type in the password, but I find that the delay actually prompting for a password, followed by the delay of verifying it, was quite tiresome on occasions (up to a few seconds).
 With SSH keys, login is almost instantaneous.
 
@@ -72,7 +72,7 @@ You have to use the following command to append to the file:
 ```zsh
 cat ~/.ssh/id_rsa.pub | ssh user@remote_server "cat >> .ssh/authorized_keys"
 ```
-Thsi says: read (`cat`) the contents of `~/.ssh/id_rsa.pub` and send it (`|`) via ssh as this user, to this machine, then print the contents to the `.ssh/authorized_keys` file.
+This says: read (`cat`) the contents of `~/.ssh/id_rsa.pub` and send it (`|`) via ssh as this user, to this machine, then print the contents to the `.ssh/authorized_keys` file.
 Writing to files using the redirect `>>` will append it to the file, rather than over-writing the contents.
 
 Make sure you're in your home folder and check your permissions are correct:

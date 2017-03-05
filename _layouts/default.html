@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ site.baseurl }}/css/common.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/syntaxDark.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:bold|Patua+One|Overpass+Mono|Fira+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:bold|Patua+One|Overpass+Mono|Fira+Sans+Condensed:300|Anonymous+Pro" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
@@ -23,19 +23,8 @@
       {{ content }}
     </div>
 
-    <!--<style type="text/css">
-      #footer {
-        position: relative;
-        bottom: 0;
-        height: 40px;
-        margin-top: 100px;
-        text-align: center;
-      }
-    </style>
-  -->
-
     <div id="footer">
-
+      {% include footer.html %}
     </div>
 
   </body>

@@ -17,7 +17,7 @@ https://gist.github.com/edwardhotchkiss/2005058
 }
 
 code {
-  font-family:'Anonymous Pro','Inconsolata','Courier', monospace;
+  font-family:'Anonymous Pro','Inconsolata','Consolas','Courier', monospace;
 }
 
 .highlight .c { color: #586E75 } /* Comment */

@@ -211,17 +211,17 @@ blockquote p {
 #footer {
   position: relative;
   height: 5%;
-  width: 102%;
+  width: 100%;
   bottom: -10px;
   left: -10px;
   margin-top: 100px;
-  background: #1E2224;
+  /*background: #1E2224; */
   font-size: 2em;
   color: #F5F5F5;
   text-align: center;
 }
 #footer li{
-  width: 45px;
+  width: 55px;
   display: inline-block;
   text-align: center;
 }

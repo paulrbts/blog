@@ -62,4 +62,5 @@ This should return just the files you manually excluded earlier (the non-casualt
 
 ##### Sources
 [My question at Stack Overflow](https://stackoverflow.com/questions/42675009/delete-files-from-a-list-in-a-text-file)
+
 [Nixcraft](https://www.cyberciti.biz/faq/deleting-bulk-files-in-unix-linux-bsd-apple-osx/)

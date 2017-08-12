@@ -48,6 +48,5 @@ It might read:
 That's it.
 
 ##### Sources
-[scottlinux.com](https://scottlinux.com/2010/12/13/cron-only-email-errors/)
-
-[alphadevx](http://www.alphadevx.com/a/384-Suppressing-Cron-Job-Email-Notifications)
+* [scottlinux.com](https://scottlinux.com/2010/12/13/cron-only-email-errors/)
+* [alphadevx](http://www.alphadevx.com/a/384-Suppressing-Cron-Job-Email-Notifications)

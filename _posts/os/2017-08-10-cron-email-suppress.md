@@ -36,7 +36,7 @@ $ crontab -e
 and add this to the end of your task:
 
 ```zsh
-> /dev/null
+>/dev/null
 ```
 
 It might read:

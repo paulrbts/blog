@@ -1,9 +1,9 @@
 ---
 layout: post
-title: SSH keys on macOS
+title: SSH keys on macOS and FreeBSD
 meta: Generating and using SSH keys in a macOS client/server environment for fast and secure login.
 category: os
-tags: [mac, security, admin]
+tags: [mac, freebsd, security, admin]
 ---
 <h3 class="page.title">
   {% if page.title %}
@@ -16,13 +16,13 @@ tags: [mac, security, admin]
 ___
 #### *Another* SSH keys guide?
 Many of the guides I have read on this subject seem to have some shortcoming or other to give me the confidence for my needs: they cover Linux; they don't explain enough about different parts, *etc.*
-As with other elements of this blog, this also acts as a reminder for me in the future if I'm doing it again, so I don't look at $SEARCH.ENGINE and find I'm not happy with the results.
+As with other elements of this blog, this also acts as a reminder for me in the future if I'm doing it again, so I don't look at $SEARCH.ENGINE and find I'm not happy with the results (i.e. having to fight through all the info to find the part I'm looking for).
 
 The whole point of SSH keys is to make it quicker to log in to remote machines.
 The danger of anything which makes processes quicker (convenience) is that they usually compromise security.
 In this case, we're actually increasing it.
 That is, as long as your local machine is [securely setup in the first place](https://github.com/drduh/macOS-Security-and-Privacy-Guide).
-The keys are going to use 2048-bit encryption, which is the default encryption level for keygens on macOS.
+The keys are going to use 2048-bit encryption, which is the default encryption level, but you could go for 4096.
 Before we start, logging in will be something like this:
 
 ```zsh
@@ -42,8 +42,10 @@ It uses three programmes/processes:
 * a local config file to create a shortcut to the server
 * a config file on the server to limit access to authorized keys only
 
+The presumption here is using a macOS local client and either a macOS or a FreeBSD remote server.
+
 ##### Local machine
-On your local machine, your daily driver -- the one from which you want to access remote machines -- fire up Terminal or iTerm2 (we're staying here for the rest of the guide) and check whether you have keys generated already:
+On your local machine, your daily driver -- the one from which you want to access remote machines -- fire up your terminal (we're staying here for the rest of the guide) and check whether you have keys generated already:
 
 ```zsh
 ls ~/.ssh
@@ -65,9 +67,14 @@ scp ~/.ssh/id_rsa.pub user@remote_server.com:.ssh/authorized_keys
 ```
 This says: securely copy my public key to `authorized_keys` folder on the server, owned by that user.
 This means you'll be able to log in as that user, and that user only, so make sure you substitute the required user on your server in the above command.
+You may find that your FreeBSD user doesn't have a `~/.ssh` directory, in which you case you need to create one and then run the above command again:
 
-If you're adding keys to the server, then the above command will write over what's already in there.
-You have to use the following command to append to the file:
+```zsh
+mkdir ~/.ssh
+scp ~/.ssh/id_rsa.pub user@remote_server.com:.ssh/authorized_keys
+```
+If you're *adding* keys to the server, then the above command will write over what's already in there.
+You have to use the following command to *append* to the file:
 
 ```zsh
 cat ~/.ssh/id_rsa.pub | ssh user@remote_server "cat >> .ssh/authorized_keys"
@@ -92,11 +99,11 @@ ls -al
 ```
 These should be even less permissive: `-rw-------`.
 If they aren't: `chmod 600 ~/.ssh`.
-These could both be checked one after the other---or not checked at all, as long as you run the commands---then the commands chained together: `chmod 700 ~/.ssh && chmod 600 ~/.ssh*`
+These could both be checked one after the other---or not checked at all, as long as you run the commands---then the commands chained together: `chmod 700 ~/.ssh && chmod 600 ~/.ssh/*`
 
 ##### Server-side
 Jump onto the server, make sure they key works and that the permissions are correct.
-This time, you'll be looking at a directory called `authorized_keys` as well as `.ssh` (notice there is no password prompt this time):
+This time, you'll be looking at a file called `authorized_keys` as well as `.ssh` (notice there is no password prompt this time):
 
 ```zsh
 ssh user@remote_server.com
@@ -134,7 +141,7 @@ One final test: `ssh lemmein`
 And you should be in.
 
 ##### Preventing password access
-macOS uses some OpenBSD goodness.
+Both macOS and FreeBSD use some OpenBSD goodness for this bit.
 For example, the system-wide SSH config file I referred to earlier and an sshd config file, both residing in `/etc/ssh`.
 We're going to jump onto our server and edit the sshd config file to make sure that passwords aren't accepted, only RSA authentication is a permitted way of getting in through the SSH port.
 
@@ -143,8 +150,6 @@ ssh lemmein
 cd /etc/ssh
 nano sshd_config
 ```
-See, it says right at the top that it's from OpenBSD.
-
 These lines should be present but commented out (with a #).
 They may have a 'yes' there, so just make sure each line matches the following, i.e. delete the # if there's one there:
 
@@ -155,11 +160,14 @@ ChallengeResponseAuthentication no
 PasswordAuthentication no
 UsePAM no
 ```
-
 Finally, just restart the SSH daemon:
 ```zsh
+# macOS
 sudo launchctl stop com.openssh.sshd
 sudo launchctl start com.openssh.sshd
+
+# FreeBSD
+sudo service restart sshd
 ```
 
 ##### Sources

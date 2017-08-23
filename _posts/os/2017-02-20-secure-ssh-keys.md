@@ -142,7 +142,7 @@ And you should be in.
 
 ##### Preventing password access
 Both macOS and FreeBSD use some OpenBSD goodness for this bit.
-For example, the system-wide SSH config file I referred to earlier and an sshd config file, both residing in `/etc/ssh`.
+For example, the system-wide SSH config file I referred to earlier and an sshd config file, both residing in `/etc/ssh` (though in older versions of macOS you might find it in `/etc/`).
 We're going to jump onto our server and edit the sshd config file to make sure that passwords aren't accepted, only RSA authentication is a permitted way of getting in through the SSH port.
 
 ```zsh

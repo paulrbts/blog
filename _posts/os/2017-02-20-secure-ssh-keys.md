@@ -167,7 +167,7 @@ sudo launchctl stop com.openssh.sshd
 sudo launchctl start com.openssh.sshd
 
 # FreeBSD
-sudo service restart sshd
+sudo service sshd restart
 ```
 
 ##### Sources

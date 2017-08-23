@@ -129,7 +129,7 @@ Otherwise, check it, familiarise yourself with these servers you're set up for, 
 
 ```zsh
 cd ~/.ssh
-nano config
+vi config
 
 Host [host shortname e.g. lemmein]
   HostName remote_server.com
@@ -148,7 +148,7 @@ We're going to jump onto our server and edit the sshd config file to make sure t
 ```zsh
 ssh lemmein
 cd /etc/ssh
-nano sshd_config
+vi sshd_config
 ```
 These lines should be present but commented out (with a #).
 They may have a 'yes' there, so just make sure each line matches the following, i.e. delete the # if there's one there:
@@ -171,16 +171,30 @@ sudo service sshd reload
 ```
 
 ##### Bonus tip
-FreeBSD makes it really easy to limit SSH access further:
+Both FreeBSD and macOS make it really easy to limit SSH access further:
 
 ```zsh
-cd /etc/ssh/sshd_config
+sudo vi /etc/ssh/sshd_config
 
 # Limit access to only specific users from specific IP addresses
 AllowUsers [user1@ip.address] [user2@ip.address]
 
 # Limit access to only specific users from any IP address
 AllowUsers [user1] [user2]
+```
+
+And while we're in `sshd_config` it makes sense to tighten a few more screws:
+
+```zsh
+# Search for an exact term
+/Authenticattion:
+
+# Adjust the following values to your liking, to reduce LoginGraceTime below 1m just use numbers for seconds (e.g. 10 is 10 seconds)
+LoginGraceTime 2m
+PermitRootLogin no
+StrictModes yes
+MaxAuthTries 10
+MaxSessions 10
 ```
 
 ##### Sources

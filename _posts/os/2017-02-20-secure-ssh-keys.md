@@ -167,10 +167,24 @@ sudo launchctl stop com.openssh.sshd
 sudo launchctl start com.openssh.sshd
 
 # FreeBSD
-sudo service sshd restart
+sudo service sshd reload
+```
+
+##### Bonus tip
+FreeBSD makes it really easy to limit SSH access further:
+
+```zsh
+cd /etc/ssh/sshd_config
+
+# Limit access to only specific users from specific IP addresses
+AllowUsers [user1@ip.address] [user2@ip.address]
+
+# Limit access to only specific users from any IP address
+AllowUsers [user1] [user2]
 ```
 
 ##### Sources
 * [Nixcraft](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/)
 * [MediaTemple](https://mediatemple.net/community/products/dv/204644740/using-ssh-keys-on-your-server)
 * [Matt Stauffer](https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-3-dotfiles-rc-files-and-ssh-config#ssh)
+* [The FreeBSD Documentation Project](https://www.freebsd.org/doc/en/books/handbook/openssh.html)

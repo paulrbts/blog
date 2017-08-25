@@ -118,14 +118,18 @@ root:				your-email@address.com
 below all specific aliases add this:
 ```sh
 *:				your-email@address.com
+```
 
+Then run a quick:
+
+```sh
 sudo newaliases
 ```
-send a test email:
+ and send a test email:
 
 ```sh
 date | mail -s "subject" your-email@address.com
 ```
 
 #### Sources
-* [Ben von der Weiden's Smartmontools how- to](https://bitbucket.org/benjamin-von-der-weiden/smartmontools-mac-osx-howto/src)
+* [Ben von der Weiden's Smartmontools how-to](https://bitbucket.org/benjamin-von-der-weiden/smartmontools-mac-osx-howto/src)

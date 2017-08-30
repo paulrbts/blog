@@ -33,9 +33,9 @@ Having said that, I've tried to split the file input away from the shell command
 Open your shell programme, then we'll move to the directory and copy the original file, so that we have our vanilla settings available:
 
 ```sh
-cd /etc/postfix
-sudo cp -i -p main.cf main.cf.default.orig
-sudo vi /etc/postfix/main.cf
+$ cd /etc/postfix
+$ sudo cp -i -p main.cf main.cf.default.orig
+$ sudo vi /etc/postfix/main.cf
 ```
 
 First check out the IMAP settings for your host then add the following lines below the commented out relayhosts, replacing the part in square brackets if it's different for your provider:

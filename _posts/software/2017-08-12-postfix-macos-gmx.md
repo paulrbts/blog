@@ -63,7 +63,7 @@ recipient_canonical_maps = pcre:/etc/postfix/canonical_recipient
 Now we'll edit the postfix settings, some of this is on the usual Postfix setup guides, but the part about setting up the canonical_sender and recipient that we just started that I found to be really important:
 
 ```sh
-sudo vi /etc/postfix/sasl_passwd
+$ sudo vi /etc/postfix/sasl_passwd
 ```
 
 add the following line:
@@ -73,16 +73,16 @@ add the following line:
 ```
 
 ```sh
-sudo chmod 600 /etc/postfix/sasl_passwd
-sudo postmap /etc/postfix/sasl_passwd
+$ sudo chmod 600 /etc/postfix/sasl_passwd
+$ sudo postmap /etc/postfix/sasl_passwd
 ```
 
 Now for the canonical_sender:
 
 ```sh
-sudo touch /etc/postfix/canonical_sender
-sudo chmod 644 /etc/postfix/canonical_sender
-sudo vi /etc/postfix/canonical_sender
+$ sudo touch /etc/postfix/canonical_sender
+$ sudo chmod 644 /etc/postfix/canonical_sender
+$ sudo vi /etc/postfix/canonical_sender
 ```
 
 add the following line, then we're moving on to canonical_recipient:
@@ -92,9 +92,9 @@ add the following line, then we're moving on to canonical_recipient:
 ```
 
 ```sh
-sudo touch /etc/postfix/canonical_recipient
-sudo chmod 644 /etc/postfix/canonical_recipient
-sudo nano /etc/postfix/canonical_recipient
+$ sudo touch /etc/postfix/canonical_recipient
+$ sudo chmod 644 /etc/postfix/canonical_recipient
+$ sudo nano /etc/postfix/canonical_recipient
 ```
 
 add the following line:
@@ -104,8 +104,8 @@ add the following line:
 ```
 
 ```sh
-cp -i -p /etc/aliases /etc/aliases.default
-sudo vi /etc/aliases
+$ cp -i -p /etc/aliases /etc/aliases.default
+$ sudo vi /etc/aliases
 ```
 
 Edit the following line:
@@ -123,12 +123,13 @@ below all specific aliases add this:
 Then run a quick:
 
 ```sh
-sudo newaliases
+$ sudo newaliases
 ```
- and send a test email:
+
+and send a test email:
 
 ```sh
-date | mail -s "subject" your-email@address.com
+$ date | mail -s "subject" your-email@address.com
 ```
 
 #### Sources
